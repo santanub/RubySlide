@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Ruby</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,147 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+          Ruby is...
+          <p style="font-size: 17px">a cross-platform, interpreted and object-oriented language.
+          Yukihiro Matsumoto, commonly known as 'Matz' created the Ruby language in 1993.
+          The year 2004 saw a massive surge of interest in Ruby, with the introduction of the Ruby on Rails Web application framework by David Heinemeier Hansson.</p>
+        </section>
+				<section>
+          <h3>Installation</h3>
+          <pre><code data-trim data-noescape>
+             curl -L https://get.rvm.io | bash -s stable --autolibs=3
+             rvm install 2.0.0
+             rvm use 2.0.0
+          </pre></code>
+        </section>
+        <section>
+          <h3>Run ruby files</h3>
+          <p style="font-size: 23px">
+            <div style="text-align: left;">hello.rb </div>
+            <pre><code data-trim data-noescape>puts "Hello World"</pre></code>
+            <pre><code data-trim data-noescape>ruby hello.rb</pre></code>
+          </p>
+        </section>
+        <section>
+          <h3>Interactive Ruby</h3>
+          <p style="font-size: 23px">
+            <pre><code data-trim data-noescape>
+                irb
+                >> puts 'Hello Ruby world!'
+                Hello Ruby world!
+                => nil
+            </pre></code>
+          </p>
+        </section>
+        <section>
+        <p>Ruby is a scripting language. There is no special main method in Ruby from which execution begins. </p>        
+
+        <p>Parentheses are usually optional with a method call. These calls are all valid:<br/>
+          <pre><code data-trim data-noescape>
+foobar<br/>
+foobar()<br/>
+foobar(a, b, c)<br/>
+foobar a, b, c<br/>
+</code></pre>
+</p>
+        </section>
+        <section>
+          <h3>Everything is an object</h3>
+           <p style="font-size: 19px">In Ruby, everything from an integer to a string is considered to be an object (more on this later). And each object has built in 'methods' (Ruby term for functions) which can be used to do various useful things.</p> 
+           <p style="font-size: 14px">exclude: Some methods such as puts and gets are available everywhere and don't need to be associated with a specific object.</p>
+           <pre><code data-trim data-noescape>
+           "kreeti".capitalize
+           => "Kreeti"
+           
+           >> 6.next
+           => 7
+           
+           >> false.class
+           => FalseClass
+           </code></pre>
+          </section>
+        <section>
+          <h3>Numbers in ruby</h3>
+          <p style="font-size: 17px">
+            Numbers without decimal points are called integers, and numbers with decimal points are usually called floating-point numbers or, more simply, floats.
+          </p>
+          <img src="http://rubylearning.com/images/class.png"></img>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+          > 100.class
+          => Fixnum
+          
+          > 10000000000000000000.class
+          => Bignum
+          
+          > 100.0.class
+          => Float
+          </code></pre>
+          <h4>Numbers conversion</h4>
+          <pre><code data-trim data-noescape>
+          > 1 + 2
+          => 3
+          
+          > 1 + 2.0
+          => 3.0
+          
+          
+          > 1 / 2
+          => 0
+          
+          > 1.0 / 2
+          => 0.5
+          
+          > 1 / 2.0
+          => 0.5
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+              puts nil || 2008  
+              puts false || 2008  
+              puts "ruby" || 2008 
+          </code></pre>
+          <p style="font-size: 16px">Use || to assign a value to a variable only if that variable isn't already set</p>
+        </section>
+
+        
+        <section>
+          <h3>String</h3>
+          <pre><code data-trim data-noescape>
+              "String"
+              => String
+              Interpolation
+              puts "2 + 3 = #{2+3}"
+              2 + 3 = 5
+              => nil
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>String concatenation</h3>
+          <pre><code data-trim data-noescape>
+              "String" "s"
+              => Strings
+              
+              "2" + "3"
+              
+              => "23"
+          </code></pre>
+          <h4>Useful methods</h4>
+          <ul style="font-size: 15px">
+            <li>capitalize</li>
+            <li>upcase</li>
+            <li>downcase</li>
+            <li>index</li>
+            <li>reverse</li>
+            <li>split</li>
+            <li>insert</li>
+          </ul>
+        </section>
+
 			</div>
 		</div>
 
