@@ -165,6 +165,94 @@ foobar a, b, c<br/>
           </ul>
         </section>
 
+        <section>
+          <h3>Arrays</h3>
+          <pre><code data-trim data-noescape>
+["A string", 1, true, :symbol, 2]
+
+words = ["one", "two", "three"]
+puts words[1]
+
+words = ["one", "two", "three"]
+words << "four"
+puts words[3]
+         
+words = ["one", "two", "three"]
+words[3] = "four"
+puts words[3]
+                       
+
+> words = ["one", "two", "three"]
+> words[3]
+=> nil
+
+$ irb
+> [1, 2, 3].first
+1
+> [1, 2, 3].last
+3
+
+> [1, 2, 3].length
+=> 3
+
+> [3, 1, 2].sort
+=> [1, 2, 3]
+
+> [1, nil, 2, 3, nil].compact
+=> [1, 2, 3]
+
+> [1, 2, 3].index(3)
+=> 2
+
+> [1, 2, 3, 4].rotate(2)
+=> [3, 4, 1, 2]
+
+> [[1, 2, 3], [4, 5, 6], [7, 8, 9]].transpose
+=> [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+          </code></pre>
+          
+        </section>
+
+
+        <section>
+          <h3>String concatenation</h3>
+          <p>This is how it works</p>
+          <pre><code data-trim data-noescape>
+{ "one" => "eins", "two" => "zwei", "three" => "drei" }
+
+dictionary = { "one" => "eins", "two" => "zwei", "three" => "drei" }
+puts dictionary["one"]
+
+
+> dictionary = { "one" => "eins", "two" => "zwei", "three" => "drei" }
+> dictionary["four"]
+=> nil
+
+> dictionary = { "one" => "eins" }
+> dictionary.fetch("one")
+=> "eins"
+> dictionary.fetch("two")
+KeyError: key not found: "two"
+
+> dictionary = { "one" => "eins", "two" => "zwei" }
+> dictionary.length
+=> 2
+> dictionary.size
+=> 2
+
+same
+{ :one => "eins", :two => "zwei", :three => "drei" }
+{ one: "eins", two: "zwei", three: "drei" }
+          </code></pre>
+          <h4>Useful methods</h4>
+          <ul style="font-size: 15px">
+            <li>size</li>
+            <li>keys</li>
+            <li>length</li>
+            <li>merge</li>
+          </ul>
+        </section>
+
 			</div>
 		</div>
 
